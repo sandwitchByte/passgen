@@ -44,12 +44,12 @@ def callback():
 ### characteristics for the main window
 main = Tk()
 main.geometry('500x350')
-main.title("super strong password generator <3")
+main.title("Password Generator")
 frm = ttk.Frame(main, padding=150, width=0)
 frm.grid()
 
 #main = Tk()
-ttk.Label(frm, text="Secure password generator.").grid(column=0, row=0)
+ttk.Label(frm, text="Secure password generator").grid(column=0, row=0)
 ttk.Button(frm, text="Generate!", command=callback).grid(column=0, row=1)
 
 main.mainloop()
