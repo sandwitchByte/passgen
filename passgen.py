@@ -26,11 +26,7 @@ def callback():
             sum(char in digits for char in pwd)<=5 and
             sum(char in letters for char in pwd)>=5):
             break
-    #frm1 = ttk.Frame(main, padding=100, width=1000, height=500)
-    #frm1.grid()
-    
     ### copies the password to clipboard
-    ### doesnt work (
     def copy(text):
         main.clipboard_clear()
         main.clipboard_append(text)
@@ -40,7 +36,7 @@ def callback():
     ttk.Button(frm, text="copy", command=copy(pwd)).grid(column=0, row=4)
 
 ### end function defs
-
+#
 ### characteristics for the main window
 main = Tk()
 main.geometry('500x350')
@@ -48,7 +44,7 @@ main.title("Password Generator")
 frm = ttk.Frame(main, padding=150, width=0)
 frm.grid()
 
-#main = Tk()
+### labels
 ttk.Label(frm, text="Secure password generator").grid(column=0, row=0)
 ttk.Button(frm, text="Generate!", command=callback).grid(column=0, row=1)
 
